@@ -3,8 +3,8 @@ package Exercicio4;
 public final class Caminhao 
 	extends Veiculo{
 	final double capacidadeCargaTonelada;
-	public Caminhao(String placa, String marca, double valorLocacaoDiaria, int anoFabricacao, double precoFipe, double capacidadeCargaTonelada){
-		super(placa, marca, valorLocacaoDiaria, anoFabricacao, precoFipe);
+	public Caminhao(String placa, String marca, String modelo, double valorLocacaoDiaria, int anoFabricacao, double precoFipe, double capacidadeCargaTonelada){
+		super(placa, marca, modelo, valorLocacaoDiaria, anoFabricacao, precoFipe);
 		if(capacidadeCargaTonelada<0){
 			throw new IllegalArgumentException("Capacidade de carga inválida!");
 		}
