@@ -24,11 +24,11 @@ public class ContaBancaria {
         } else if (valor > 1000) {
             System.err.println("Erro: Valor máximo por saque é R$ 1.000,00.");
         } else if (valor > saldo) {
-            System.err.println("Saldo insuficiente!");
+            System.err.println("Erro: Saldo insuficiente!");
         } else {
             this.saldo -= valor;
             this.contadorSaques++;
-            System.out.println("Saque de " + valor + "realizado. Saldo atual: R$ " + this.saldo);
+            System.out.println("Saque de " + valor + " realizado. Saldo atual: R$ " + this.saldo);
         }
     }
 }
