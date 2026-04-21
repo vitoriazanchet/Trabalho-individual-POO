@@ -17,28 +17,28 @@ public class CaixaEletronico{
                     opcao = teclado.nextInt();
             switch (opcao) {
                 case 1:
-                    System.out.println("Saldo atual: R$" + saldo + "\n");
+                    System.out.println("Saldo atual: R$" + saldo);
                     break;
                 case 2:
                     System.out.println("Digite o valor que deseja depositar: ");
                     double deposito = teclado.nextDouble();
                     saldo += deposito;
-                    System.out.println("Depósito realizado!\n");
+                    System.out.println("Depósito realizado!");
                     break;
                 case 3:
                     if (contadorSaques >= 3) {
-                        System.err.println("Limite de saques diários atingido!\n");
+                        System.err.println("Erro: Limite de saques diários atingido!");
                     } else {
                         System.out.println("Digite o valor que deseja sacar: ");
                         double saque = teclado.nextDouble();
                         if (saque > 1000) {
-                            System.err.println("Valor máximo por saque é R$ 1.000,00.\n");
+                            System.err.println("Erro: Valor máximo por saque é R$ 1.000,00.");
                         } else if (saque > saldo) {
-                            System.err.println("Saldo insuficiente!\n");
+                            System.err.println("Erro: Saldo insuficiente!");
                         } else {
                             saldo -= saque;
                             contadorSaques++;
-                            System.out.println("Saque realizado com sucesso!\n");
+                            System.out.println("Saque realizado com sucesso!");
                         }
                     }
                     break;
@@ -46,7 +46,7 @@ public class CaixaEletronico{
                     System.out.println("Sistema encerrado.");
                     break;
                 default:
-                    System.err.println("Opção inválida!\n");
+                    System.err.println("Opção inválida!");
             }
         } while (opcao != 0);
         teclado.close();
